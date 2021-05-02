@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 You can run the app without downloading by opening https://stackblitz.com/github/stenno12/day-length-app. Be sure to open app in new window because it is not optimized for a small screen
 
 ## Development server
-If you want to run the app on you computer follow these steps:
+If you want to run the app on your computer follow these steps:
 
 1. Install node if you don't have it https://nodejs.org/en/download/
 2. Install Angular CLI if you don't have it, run: `npm install -g @angular/cli` -g installs it globally
