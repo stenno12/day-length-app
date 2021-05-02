@@ -14,7 +14,7 @@ If you want to run the app on you computer follow these steps:
 4. Run `ng serve -o` for a dev server, -o opens the browser on `http://localhost:4200/`
 
 
-Most of the code I wrote is in files: 
+### Most of the code I wrote is in files: 
 * src\app\daylight-time.service.ts
 * src\app\daylight-response.ts
 * src\app\daylight-time\daylight-time.component.html
