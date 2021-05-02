@@ -30,7 +30,6 @@ export class DaylightTimeComponent implements OnInit {
   type = ChartType.ColumnChart;
   data: (string | number)[][] = [];
   chartColumns = ['Date', 'Hours'];
-  title = 'hours';
   options = {};
   width = 1500;
   height = 400;
