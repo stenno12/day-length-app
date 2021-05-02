@@ -1,0 +1,62 @@
+<h3>
+  Get day length based on coordinates and date<br />
+  Insert coordinates manually or click on the map<br />
+  It's also possible to insert a date range and see the results on a graph<br />
+  Graph displays date ranges up to 1.5 years
+</h3>
+<label for="latitude">Latitude: </label>
+<input id="latitude" [(ngModel)]="latitude" />
+<br />
+
+<label for="longitude">Longitude: </label>
+<input id="longitude" [(ngModel)]="longitude" />
+<br />
+
+<div id="mapId"></div>
+
+<label for="useDateRange">Use date range </label>
+<input type="checkbox" id="useDateRange" [(ngModel)]="useDateRange" />
+<br />
+
+<label for="date" [hidden]="useDateRange">Date </label>
+<label for="date" [hidden]="!useDateRange">Start date </label>
+<input type="date" id="date" [(ngModel)]="date" />
+<br />
+
+<label for="endDate" [hidden]="!useDateRange">End date </label>
+<input
+  type="date"
+  id="endDate"
+  [(ngModel)]="endDate"
+  [hidden]="!useDateRange"
+/>
+<br [hidden]="!useDateRange" />
+
+<button (click)="onSubmit()">Submit</button>
+<br />
+
+<span [hidden]="useDateRange"
+  >Day length: {{ daylightTimeHours }} <br />
+  Sunrise: {{ sunrise }} <br />
+  Sunset: {{ sunset }}</span
+>
+
+<div [hidden]="!isGraphVisible">
+  <google-chart
+    [type]="type"
+    [data]="data"
+    [columns]="chartColumns"
+    [title]="title"
+    [options]="options"
+    [width]="width"
+    [height]="height"
+  >
+  </google-chart>
+</div>
+
+<hr />
+Single day sunlight data from
+<a href="https://sunrise-sunset.org/api">sunrise-sunset.org/api</a>
+<br />
+Date range sunlight data calculated using
+<a href="https://github.com/mourner/suncalc">SunCalc library</a>
