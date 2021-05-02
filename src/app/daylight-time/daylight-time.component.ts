@@ -32,7 +32,7 @@ export class DaylightTimeComponent implements OnInit {
   chartColumns = ['Date', 'Hours'];
   title = 'hours';
   options = {};
-  width = 1600;
+  width = 1500;
   height = 400;
 
   ngOnInit() {
